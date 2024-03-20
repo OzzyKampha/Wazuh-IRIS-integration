@@ -39,7 +39,7 @@ alert_level = alert_json["rule"]["level"]
 alert_title = alert_json["rule"]["description"]
 alert_description = find_message_field(alert_json["data"])
 agent_name = alert_json["agent"]["name"]
-agent_ip = alert_json["agent"]["ip"]
+#agent_ip = alert_json["agent"]["ip"]
 agent_id = alert_json["agent"]["id"]
 rule_id = alert_json["rule"]["id"]
 rule_fires = alert_json["rule"]["firedtimes"]
@@ -65,7 +65,7 @@ else:
 payload = json.dumps({
     "alert_title": alert_title,
     "alert_description": f"""Agent ID: {agent_id}
-Agent IP: {agent_ip}
+Agent IP: 
 Agent Name: {agent_name}
 
 Alert Details: {alert_description}
